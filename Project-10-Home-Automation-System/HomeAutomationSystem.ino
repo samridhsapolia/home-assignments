@@ -8,18 +8,16 @@
 #include <ArduinoJson.h>
 
 // ---------------- USER CONFIG ----------------
-const char* WIFI_SSID     = "YOUR_WIFI_SSID";
-const char* WIFI_PASSWORD = "YOUR_WIFI_PASSWORD";
-
+const char* WIFI_SSID = "Wokwi-GUEST";
+const char* WIFI_PASSWORD = "";
 const char* MQTT_BROKER   = "broker.hivemq.com";
 const int   MQTT_PORT     = 1883;
 const char* MQTT_TOPIC    = "iitjammu/yourname/home";   // <-- change [yourname]
 const char* MQTT_CLIENT_ID = "esp32-home-hub-01";        // keep unique on shared broker
 
 // ---------------- PIN CONFIG ----------------
-#define DHTPIN      4
-#define DHTTYPE     DHT11
-
+#define DHTPIN 15
+#define DHTTYPE DHT22
 #define MQ2_PIN     35
 #define PIR_PIN     13
 #define LDR_PIN     34
@@ -475,3 +473,4 @@ void loop() {
     lastOLEDSwitch = now;
   }
 }
+
